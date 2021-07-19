@@ -29,3 +29,4 @@ vncserver -kill :1
 ```
 
 [Второй вариант Install VNC on Centos ](https://www.tecmint.com/install-and-configure-vnc-server-in-centos-7/)
+[Более точная статья](https://serverspace.ru/support/help/installing-and-configuring-a-vnc-server-on-centos-7/)
