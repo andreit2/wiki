@@ -27,3 +27,5 @@ firewall-cmd --add-port=5901/tcp --permanent
 ```
 vncserver -kill :1
 ```
+
+[Второй вариант Install VNC on Centos ](https://www.tecmint.com/install-and-configure-vnc-server-in-centos-7/)
