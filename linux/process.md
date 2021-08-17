@@ -5,7 +5,14 @@ cat /proc/sys/kernel/pid_max
 echo 32768 > /proc/sys/kernel/pid_max
 Max value 4194304
 ```
-
+## Атрибуты процесса
+State\
+• R - Running\
+• S - Sleeping\
+• D - Uninterruptable I/O\
+• Z - Zombie\
+• t - Trace\
+• T - STOP
 ## PS
 
 ```
@@ -23,6 +30,7 @@ ps -p 1154 -o pid,ppid,fgroup,ni,lstart,etime  #Форматируем выво�
 ps -C httpd  #Показываем родителя и дочернии процессы 
 ps -o pid,pri,nice,command #Форматируем вывод 
 renice -20 -p [PID] # изменяем NICE (от -20 - наивысший, до +19 - низший)
+ps axo rss | tail -n +2|paste -sd+ | bc #Подсчет резидетной памяти
 ```
 
 ## PSTREE
