@@ -20,7 +20,9 @@ ps -e --forest   #Показать древо процессов
 ps -fL -C httpd  #Вывести все треды конкретного процесса  
 ps -eo pid,ppid,user,cmd  #Форматируем вывод  
 ps -p 1154 -o pid,ppid,fgroup,ni,lstart,etime  #Форматируем вывод и выводим по PID  
-ps -C httpd  #Показываем родителя и дочернии процессы   
+ps -C httpd  #Показываем родителя и дочернии процессы 
+ps -o pid,pri,nice,command #Форматируем вывод 
+renice -20 -p [PID] # изменяем NICE (от -20 - наивысший, до +19 - низший)
 ```
 
 ## PSTREE
